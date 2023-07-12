@@ -7,15 +7,11 @@ FROM node:14.17.0
 WORKDIR /usr/src/app
 
 # Copy the frontend folder into the container
-COPY frontend/package.json ./
+COPY frontend/.
 
 # Install dependencies
-RUN rm -rf node_modules package-lock.json && npm install
-# RUN npm install
-
-#Copy
-COPY frontend/ .
-
+RUN rm -rf node_modules package-lock.json
+RUN npm install
 
 # Expose the port on which the frontend server runs
 EXPOSE 3000
