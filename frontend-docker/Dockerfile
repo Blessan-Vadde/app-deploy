@@ -6,12 +6,12 @@ FROM node:14.17.0
 # Set the working directory inside the container
 WORKDIR /usr/src/app
 
-
 # Copy the frontend folder into the container
-COPY frontend/package*.json ./
+COPY frontend/package.json ./
 
 # Install dependencies
-RUN npm install
+RUN sudo rm -rf node_modules package-lock.json && npm install
+# RUN npm install
 
 #Copy
 COPY frontend/ .
