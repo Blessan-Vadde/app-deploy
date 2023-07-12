@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 COPY frontend/package.json ./
 
 # Install dependencies
-RUN sudo rm -rf node_modules package-lock.json && npm install
+RUN rm -rf node_modules package-lock.json && npm install
 # RUN npm install
 
 #Copy
