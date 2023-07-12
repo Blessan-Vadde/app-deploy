@@ -10,8 +10,8 @@ WORKDIR /usr/src/app
 COPY frontend/ .
 
 # Install dependencies
-RUN rm -rf node_modules package-lock.json
-RUN npm install -g npm@latest
+# RUN rm -rf node_modules package-lock.json
+RUN npm install 
 
 # Expose the port on which the frontend server runs
 EXPOSE 3000
