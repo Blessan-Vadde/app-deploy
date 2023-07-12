@@ -7,7 +7,7 @@ FROM node:14.17.0
 WORKDIR /usr/src/app
 
 # Copy the frontend folder into the container
-COPY frontend/.
+COPY frontend/ .
 
 # Install dependencies
 RUN rm -rf node_modules package-lock.json
