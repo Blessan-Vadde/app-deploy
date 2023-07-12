@@ -9,8 +9,8 @@ WORKDIR /usr/src/app
 # Copy the frontend folder into the container
 COPY frontend/ .
 
-# Install dependencies
-# RUN rm -rf node_modules package-lock.json
+# Remove and Install dependencies
+RUN rm -rf node_modules package-lock.json
 RUN npm install 
 
 # Expose the port on which the frontend server runs
